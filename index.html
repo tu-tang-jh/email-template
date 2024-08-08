@@ -12,7 +12,7 @@
         box-sizing: border-box;
       }
 
-      p, 
+      p,
       u,
       ul {
         padding: 0;
@@ -46,161 +46,343 @@
         font-size: 1.25rem;
       }
 
-      .section-button {
-        padding: 13px;
-        width: fit-content;
-        border: 1px solid #000000;
-        border-radius: 4px;
-        background: #ffffff;
-        font-size: 14px;
-        font-family: Noto Sans, sans-serif;
-        font-weight: 500;
-        line-height: 16px;
-        letter-spacing: 0.13px;
-        text-align: center;
-      }
-
-      .section-description {
-        font-size: 20px;
-        line-height: 24px;
-      }
-
-      #emailContainer {
-        padding-top: 40px;
-
-        tbody {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 40px;
+      @media only screen and (min-width: 480px) {
+        .section-button {
+          padding: 13px;
+          width: fit-content;
+          border: 1px solid #000000;
+          border-radius: 4px;
+          background: #ffffff;
+          font-size: 14px;
+          font-family: Noto Sans, sans-serif;
+          font-weight: 500;
+          line-height: 16px;
+          letter-spacing: 0.13px;
+          text-align: center;
         }
 
-        .logo {
-          font-size: 36px;
-          font-weight: 700;
-          text-transform: uppercase;
+        .section-description {
+          font-size: 20px;
+          line-height: 24px;
         }
 
-        #emailBody {
-          .heroes-section {
-            .heroes-section__data {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              padding: 20px;
-              gap: 24px;
+        #emailContainer {
+          padding-top: 40px;
 
-              .heroes__image {
-                height: 360px;
-                width: 100%;
-                border-radius: 20px;
-                background: #fff0f0;
-
-                img {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: contain;
-                }
-              }
-            }
+          tbody {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
           }
 
-          .section-left,
-          .section-right {
-            padding: 20px;
+          .logo {
+            font-size: 36px;
+            font-weight: 700;
+            text-transform: uppercase;
+          }
 
-            .section-left__data,
-            .section-right__data {
-              display: flex;
-              gap: 32px;
-
-              .section-left__image,
-              .section-right__image {
-                flex: 1;
-                width: 260px;
-                height: 260px;
-                border-radius: 8px;
-
-                &.section-1__image {
-                  background: #ffa1b8;
-                }
-
-                &.section-2__image {
-                  background: #c5f8ff;
-                }
-
-                &.section-3__image {
-                  background: #ffe27b;
-                }
-
-                img {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: contain;
-                }
-              }
-
-              .section-left__content,
-              .section-right__content {
-                flex: 1;
+          #emailBody {
+            .heroes-section {
+              .heroes-section__data {
                 display: flex;
                 flex-direction: column;
-                padding: 16px 0;
-                gap: 8px;
-                text-align: left;
+                align-items: center;
+                padding: 20px;
+                gap: 24px;
 
-                .section-button {
-                  margin-top: 8px;
+                .heroes__image {
+                  height: 360px;
+                  width: 100%;
+                  border-radius: 20px;
+                  background: #fff0f0;
+
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                  }
                 }
               }
             }
 
-            .section-right__data {
-              flex-direction: row-reverse;
-            }
-          }
+            .section-left,
+            .section-right {
+              padding: 20px;
 
-          .conclusion-section {
-            p {
+              .section-left__data,
+              .section-right__data {
+                display: flex;
+                gap: 32px;
+
+                .section-left__image,
+                .section-right__image {
+                  flex: 1;
+                  width: 260px;
+                  height: 260px;
+                  border-radius: 8px;
+
+                  &.section-1__image {
+                    background: #ffa1b8;
+                  }
+
+                  &.section-2__image {
+                    background: #c5f8ff;
+                  }
+
+                  &.section-3__image {
+                    background: #ffe27b;
+                  }
+
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                  }
+                }
+
+                .section-left__content,
+                .section-right__content {
+                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+                  padding: 16px 0;
+                  gap: 8px;
+                  text-align: left;
+
+                  .section-button {
+                    margin-top: 8px;
+                  }
+                }
+              }
+
+              .section-right__data {
+                flex-direction: row-reverse;
+              }
+            }
+
+            .conclusion-section {
+              p {
                 padding: 0 20px;
                 text-align: start;
+              }
+            }
+
+            hr {
+              width: 540px;
+              border: 1.5px solid #000000;
             }
           }
 
-          hr {
-            width: 540px;
-            border: 1.5px solid #000000;
+          #emailFooter {
+            tbody {
+              display: flex;
+              flex-direction: column;
+              gap: 17px;
+
+              p,
+              u {
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 18.52px;
+                text-align: center;
+              }
+            }
           }
         }
 
         #emailFooter {
-            tbody {
-                display: flex;
-                flex-direction: column;
-                gap: 17px;
-                
-                p, u {
-                    font-size: 13px;
-                    font-weight: 400;
-                    line-height: 18.52px;
-                    text-align: center;
-                }
-            }
-        }
-      }
-
-      #emailFooter {
-        .footer-section {
+          .footer-section {
             display: flex;
             flex-direction: column;
             gap: 25px;
 
             .social-media-container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 26px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 26px;
             }
+          }
+        }
+      }
+
+      /* Responsive for mobile */
+      @media only screen and (max-width: 480px) {
+
+        h2 {
+        font-size: 28px;
+      }
+
+      h3 {
+        font-size: 27px;
+      }
+        .section-button {
+          padding: 13px;
+          width: fit-content;
+          border: 1px solid #000000;
+          border-radius: 4px;
+          background: #ffffff;
+          font-size: 14px;
+          font-family: Noto Sans, sans-serif;
+          font-weight: 500;
+          line-height: 16px;
+          letter-spacing: 0.13px;
+          text-align: center;
+        }
+
+        .section-description {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        #emailContainer {
+          width: 100%;
+          padding-top: 24px;
+
+          tbody {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+
+            tr {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+            }
+          }
+
+          .logo {
+            font-size: 32px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+          }
+
+          #emailBody {
+            .heroes-section {
+              .heroes-section__data {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 12px 24px;
+                gap: 24px;
+
+                .heroes__image {
+                  width: 100%;
+                  aspect-ratio: 2 / 1;
+                  border-radius: 20px;
+                  background: #fff0f0;
+
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                  }
+                }
+              }
+            }
+
+            .section-left,
+            .section-right {
+              padding: 12px 24px;
+
+              .section-left__data,
+              .section-right__data {
+                display: flex;
+                flex-direction: column-reverse;
+                gap: 16px;
+
+                .section-left__image,
+                .section-right__image {
+                  flex: 1;
+                  width: 100%;
+                  max-height: 300px;
+                  aspect-ratio: 1/1;
+                  border-radius: 8px;
+                  align-self: center;
+
+                  &.section-1__image {
+                    background: #ffa1b8;
+                  }
+
+                  &.section-2__image {
+                    background: #c5f8ff;
+                  }
+
+                  &.section-3__image {
+                    background: #ffe27b;
+                  }
+
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                  }
+                }
+
+                .section-left__content,
+                .section-right__content {
+                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 8px;
+                  text-align: center;
+
+                  .section-button {
+                    margin-top: 8px;
+                    align-self: center;
+                  }
+                }
+              }
+            }
+
+            .conclusion-section {
+              p {
+                font-size: 16px;
+                padding: 0 20px;
+                text-align: start;
+              }
+            }
+
+            hr {
+              width: calc(100% - 48px);
+              margin: 0 auto;
+              border: 1.5px solid #000000;
+            }
+          }
+
+          #emailFooter {
+            tbody {
+              display: flex;
+              flex-direction: column;
+              gap: 17px;
+
+              p,
+              u {
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 18.52px;
+                text-align: center;
+              }
+            }
+          }
+        }
+
+        #emailFooter {
+          .footer-section {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            .social-media-container {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 26px;
+            }
+          }
         }
       }
     </style>
@@ -343,10 +525,10 @@
                       </td>
                     </tr>
                     <tr>
-                        <td>
-                            <hr/>
-                        </td>
-                      </tr>
+                      <td>
+                          <hr/>
+                      </td>
+                    </tr>
                   </table>
                 </td>
               </tr>
@@ -360,27 +542,50 @@
                     id="emailFooter"
                   >
                     <tbody>
-                        <tr>
-                            <td class="footer-section" align="center" valign="top">
-                                <p>Corporation<br/>You are receiving this email because you opted in via our <br/>website.</p>
-                                <div class="social-media-container">
-                                    <a><img src="/assets/icons/Twitter.png" alt="Twitter"></a>
-                                    <a><img src="/assets/icons/Instagram.png" alt="Instagram"></a>
-                                    <a><img src="/assets/icons/Youtube.png" alt="Youtube"></a>
-                                    <a><img src="/assets/icons/Dribble.png" alt="Dribble"></a>
-                                    <a><img src="/assets/icons/Linkedin.png" alt="Linkedin"></a>
-                                </div>
-                                <p>
-                                    Address, #PC
-                                    <br/>City, State.
-                                    <br/>
-                                    <u>Unsubscribe</u>
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="logo">Logo</td>
-                        </tr>
+                      <tr>
+                        <td class="footer-section" align="center" valign="top">
+                          <p>
+                            Corporation<br />You are receiving this email
+                            because you opted in via our <br />website.
+                          </p>
+                          <div class="social-media-container">
+                            <a
+                              ><img
+                                src="/assets/icons/Twitter.png"
+                                alt="Twitter"
+                            /></a>
+                            <a
+                              ><img
+                                src="/assets/icons/Instagram.png"
+                                alt="Instagram"
+                            /></a>
+                            <a
+                              ><img
+                                src="/assets/icons/Youtube.png"
+                                alt="Youtube"
+                            /></a>
+                            <a
+                              ><img
+                                src="/assets/icons/Dribble.png"
+                                alt="Dribble"
+                            /></a>
+                            <a
+                              ><img
+                                src="/assets/icons/Linkedin.png"
+                                alt="Linkedin"
+                            /></a>
+                          </div>
+                          <p>
+                            Address, #PC
+                            <br />City, State.
+                            <br />
+                            <u>Unsubscribe</u>
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="logo">Logo</td>
+                      </tr>
                     </tbody>
                   </table>
                 </td>

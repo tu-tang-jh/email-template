@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title></title>
+    <title>Email Template</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 
@@ -29,14 +29,6 @@
         cursor: pointer;
       }
 
-      h2 {
-        font-size: 36px;
-      }
-
-      h3 {
-        font-size: 27px;
-      }
-
       body {
         margin: 0;
         padding: 0;
@@ -47,342 +39,145 @@
       }
 
       @media only screen and (min-width: 480px) {
-        .section-button {
-          padding: 13px;
-          width: fit-content;
-          border: 1px solid #000000;
-          border-radius: 4px;
-          background: #ffffff;
-          font-size: 14px;
-          font-family: Noto Sans, sans-serif;
-          font-weight: 500;
-          line-height: 16px;
-          letter-spacing: 0.13px;
-          text-align: center;
+        #emailContainer tbody {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 40px;
         }
 
-        .section-description {
-          font-size: 20px;
-          line-height: 24px;
+        #section-table tbody {
+          gap: 8px;
         }
 
-        #emailContainer {
-          padding-top: 40px;
-
-          tbody {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 40px;
-          }
-
-          .logo {
-            font-size: 36px;
-            font-weight: 700;
-            text-transform: uppercase;
-          }
-
-          #emailBody {
-            .heroes-section {
-              .heroes-section__data {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 20px;
-                gap: 24px;
-
-                .heroes__image {
-                  height: 360px;
-                  width: 100%;
-                  border-radius: 20px;
-                  background: #fff0f0;
-
-                  img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                  }
-                }
-              }
-            }
-
-            .section-left,
-            .section-right {
-              padding: 20px;
-
-              .section-left__data,
-              .section-right__data {
-                display: flex;
-                gap: 32px;
-
-                .section-left__image,
-                .section-right__image {
-                  flex: 1;
-                  width: 260px;
-                  height: 260px;
-                  border-radius: 8px;
-
-                  &.section-1__image {
-                    background: #ffa1b8;
-                  }
-
-                  &.section-2__image {
-                    background: #c5f8ff;
-                  }
-
-                  &.section-3__image {
-                    background: #ffe27b;
-                  }
-
-                  img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                  }
-                }
-
-                .section-left__content,
-                .section-right__content {
-                  flex: 1;
-                  display: flex;
-                  flex-direction: column;
-                  padding: 16px 0;
-                  gap: 8px;
-                  text-align: left;
-
-                  .section-button {
-                    margin-top: 8px;
-                  }
-                }
-              }
-
-              .section-right__data {
-                flex-direction: row-reverse;
-              }
-            }
-
-            .conclusion-section {
-              p {
-                padding: 0 20px;
-                text-align: start;
-              }
-            }
-
-            hr {
-              width: 540px;
-              border: 1.5px solid #000000;
-            }
-          }
-
-          #emailFooter {
-            tbody {
-              display: flex;
-              flex-direction: column;
-              gap: 17px;
-
-              p,
-              u {
-                font-size: 13px;
-                font-weight: 400;
-                line-height: 18.52px;
-                text-align: center;
-              }
-            }
-          }
+        #emailContainer #emailBody .heroes-section .heroes-section__data {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 20px;
+          gap: 24px;
         }
 
-        #emailFooter {
-          .footer-section {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-
-            .social-media-container {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              gap: 26px;
-            }
-          }
-        }
-      }
-
-      /* Responsive for mobile */
-      @media only screen and (max-width: 480px) {
-
-        h2 {
-        font-size: 28px;
-      }
-
-      h3 {
-        font-size: 27px;
-      }
-        .section-button {
-          padding: 13px;
-          width: fit-content;
-          border: 1px solid #000000;
-          border-radius: 4px;
-          background: #ffffff;
-          font-size: 14px;
-          font-family: Noto Sans, sans-serif;
-          font-weight: 500;
-          line-height: 16px;
-          letter-spacing: 0.13px;
-          text-align: center;
+        #emailContainer #emailBody .section-left,
+        #emailContainer #emailBody .section-right {
+          padding: 20px;
         }
 
-        .section-description {
-          font-size: 16px;
-          line-height: 24px;
+        #emailContainer #emailBody .section-left .section-left__data,
+        #emailContainer #emailBody .section-right .section-right__data {
+          display: flex;
+          gap: 32px;
         }
 
-        #emailContainer {
+        #emailContainer
+          #emailBody
+          .section-left
+          .section-left__data
+          .section-left__image,
+        #emailContainer
+          #emailBody
+          .section-right
+          .section-right__data
+          .section-right__image {
+          flex: 1;
+          width: 260px;
+          height: 260px;
+          border-radius: 8px;
+        }
+
+        .section-left .section-left__data .section-left__image img,
+        .section-right .section-right__data .section-right__image img {
           width: 100%;
-          padding-top: 24px;
-
-          tbody {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 16px;
-
-            tr {
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-            }
-          }
-
-          .logo {
-            font-size: 32px;
-            font-weight: 700;
-            text-transform: uppercase;
-            text-align: center;
-          }
-
-          #emailBody {
-            .heroes-section {
-              .heroes-section__data {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 12px 24px;
-                gap: 24px;
-
-                .heroes__image {
-                  width: 100%;
-                  aspect-ratio: 2 / 1;
-                  border-radius: 20px;
-                  background: #fff0f0;
-
-                  img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                  }
-                }
-              }
-            }
-
-            .section-left,
-            .section-right {
-              padding: 12px 24px;
-
-              .section-left__data,
-              .section-right__data {
-                display: flex;
-                flex-direction: column-reverse;
-                gap: 16px;
-
-                .section-left__image,
-                .section-right__image {
-                  flex: 1;
-                  width: 100%;
-                  max-height: 300px;
-                  aspect-ratio: 1/1;
-                  border-radius: 8px;
-                  align-self: center;
-
-                  &.section-1__image {
-                    background: #ffa1b8;
-                  }
-
-                  &.section-2__image {
-                    background: #c5f8ff;
-                  }
-
-                  &.section-3__image {
-                    background: #ffe27b;
-                  }
-
-                  img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                  }
-                }
-
-                .section-left__content,
-                .section-right__content {
-                  flex: 1;
-                  display: flex;
-                  flex-direction: column;
-                  gap: 8px;
-                  text-align: center;
-
-                  .section-button {
-                    margin-top: 8px;
-                    align-self: center;
-                  }
-                }
-              }
-            }
-
-            .conclusion-section {
-              p {
-                font-size: 16px;
-                padding: 0 20px;
-                text-align: start;
-              }
-            }
-
-            hr {
-              width: calc(100% - 48px);
-              margin: 0 auto;
-              border: 1.5px solid #000000;
-            }
-          }
-
-          #emailFooter {
-            tbody {
-              display: flex;
-              flex-direction: column;
-              gap: 17px;
-
-              p,
-              u {
-                font-size: 13px;
-                font-weight: 400;
-                line-height: 18.52px;
-                text-align: center;
-              }
-            }
-          }
+          height: 100%;
+          object-fit: contain;
         }
 
-        #emailFooter {
-          .footer-section {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
+        .section-left__image.section-1__image,
+        .section-right__image.section-1__image {
+          background: #ffa1b8;
+        }
 
-            .social-media-container {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              gap: 26px;
-            }
-          }
+        .section-left__image.section-2__image,
+        .section-right__image.section-2__image {
+          background: #c5f8ff;
+        }
+
+        .section-left__image.section-3__image,
+        .section-right__image.section-3__image {
+          background: #ffe27b;
+        }
+
+        #emailContainer
+          #emailBody
+          .section-left
+          .section-left__data
+          .section-left__content,
+        #emailContainer
+          #emailBody
+          .section-right
+          .section-right__data
+          .section-right__content {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          padding: 16px 0;
+          gap: 8px;
+          text-align: left;
+        }
+
+        #emailContainer
+          #emailBody
+          .section-left
+          .section-left__data
+          .section-left__content
+          .section-button,
+        #emailContainer
+          #emailBody
+          .section-right
+          .section-right__data
+          .section-right__content
+          .section-button {
+          margin-top: 8px;
+        }
+
+        #emailContainer #emailBody .section-right .section-right__data {
+          flex-direction: row-reverse;
+        }
+
+        #emailContainer #emailBody .conclusion-section p {
+          text-align: start;
+        }
+
+        #emailContainer #emailBody hr {
+          width: 540px;
+          border: 1.5px solid #000000;
+        }
+
+        #emailContainer #emailFooter tbody {
+          display: flex;
+          flex-direction: column;
+          gap: 17px;
+        }
+
+        #emailContainer #emailFooter p,
+        #emailContainer #emailFooter u {
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 18.52px;
+          text-align: center;
+        }
+
+        #emailFooter .footer-section {
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+        }
+
+        #emailFooter .footer-section .social-media-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 26px;
         }
       }
     </style>
@@ -397,17 +192,17 @@
       id="bodyTable"
     >
       <tr>
-        <td align="center" valign="top">
+        <td align="center" valign="top" style="padding: 0">
           <table
             border="0"
             cellpadding="20"
-            cellspacing="0"
             width="600"
             id="emailContainer"
+            style="padding-top: 40px; border-spacing: 0 40px"
           >
             <tbody>
               <tr>
-                <td align="center" valign="top">
+                <td align="center" valign="top" style="padding: 0">
                   <table
                     border="0"
                     cellpadding="20"
@@ -416,124 +211,429 @@
                     id="emailHeader"
                   >
                     <tr>
-                      <td class="logo" align="center" valign="top">Logo</td>
+                      <td align="center" valign="top" style="padding: 0">
+                        <h1
+                          class="logo"
+                          style="
+                            font-size: 36px;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                            text-align: center;
+                            margin: 0;
+                          "
+                        >
+                          Logo
+                        </h1>
+                      </td>
                     </tr>
                   </table>
                 </td>
               </tr>
               <tr>
-                <td align="center" valign="top">
+                <td align="center" valign="top" style="padding: 0">
                   <table
                     border="0"
                     cellpadding="20"
-                    cellspacing="0"
                     width="100%"
                     id="emailBody"
+                    style="border-spacing: 40px"
                   >
                     <tr class="heroes-section">
-                      <td class="heroes-section__data" align="center">
-                        <h2 class="section-title">Email Template</h2>
-                        <div class="heroes__image">
-                          <img
-                            src="https://s3-alpha-sig.figma.com/img/a61a/020e/f6b2a623600aa903b8928cd592695bfd?Expires=1724025600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=P7vQ9snycaxVIXoQnBbBKGy4bIRBC3uZucCnDTIBGZnsOy26FhW4CqaBxGTSnDDwk2voEBj5jnw3L5cF5kETWrRJZsm5q1Sv~YHgggdpZYqp4O1VsmfUodZnUe-TXB9Lcu9PeqZnAhvWtiSJNT-Eliath~2E6EnGWdng3FJt61grLHqiLtsP~vShz9hOmw6UXXO1P6uRdWad-TOKXQCHguia2Wzk~kJwwA-WA3BYIw1355EG-avwnLkDfH1YrJNaRw9Pv7VVCf7yTpl5Sm~1N~Jv5IdzH79uXpQZlpnSTsuLzoVKwVUBMAGh359e389dVsmIwEM79dXsBp0~I8MhEg__"
-                            alt="Heroes image"
-                          />
-                        </div>
-                        <p class="section-description">
-                          Boost your emails with Blush! Create dope emails easy
-                          and fast! Install the Blush plugin to customize all
-                          the illustrations!
-                        </p>
-                        <button class="section-button">
-                          <a href="/">Try it now!</a>
-                        </button>
+                      <td
+                        class="heroes-section__data"
+                        align="center"
+                        style="padding: 0"
+                      >
+                        <h2
+                          class="section-title"
+                          style="font-size: 36px; margin: 0"
+                        >
+                          Email Template
+                        </h2>
+                        <table>
+                          <tr
+                            class="heroes__image"
+                            align="center"
+                            style="
+                              height: 360px;
+                              width: 100%;
+                              border-radius: 20px;
+                              background: #fff0f0;
+                            "
+                          >
+                            <td align="center" style="padding: 0">
+                              <img
+                                src="https://s3-alpha-sig.figma.com/img/a61a/020e/f6b2a623600aa903b8928cd592695bfd?Expires=1724025600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=P7vQ9snycaxVIXoQnBbBKGy4bIRBC3uZucCnDTIBGZnsOy26FhW4CqaBxGTSnDDwk2voEBj5jnw3L5cF5kETWrRJZsm5q1Sv~YHgggdpZYqp4O1VsmfUodZnUe-TXB9Lcu9PeqZnAhvWtiSJNT-Eliath~2E6EnGWdng3FJt61grLHqiLtsP~vShz9hOmw6UXXO1P6uRdWad-TOKXQCHguia2Wzk~kJwwA-WA3BYIw1355EG-avwnLkDfH1YrJNaRw9Pv7VVCf7yTpl5Sm~1N~Jv5IdzH79uXpQZlpnSTsuLzoVKwVUBMAGh359e389dVsmIwEM79dXsBp0~I8MhEg__"
+                                alt="Heroes image"
+                                style="
+                                  width: 100%;
+                                  height: 100%;
+                                  object-fit: contain;
+                                "
+                              />
+                            </td>
+                          </tr>
+                          <tr align="center">
+                            <td align="center" style="padding: 0">
+                              <p
+                                class="section-description"
+                                style="font-size: 20px; line-height: 24px"
+                              >
+                                Boost your emails with Blush! Create dope emails
+                                easy and fast! Install the Blush plugin to
+                                customize all the illustrations!
+                              </p>
+                            </td>
+                          </tr>
+                          <tr align="center">
+                            <td align="center" style="padding: 0">
+                              <button
+                                class="section-button"
+                                style="
+                                  padding: 13px;
+                                  width: fit-content;
+                                  border: 1px solid #000000;
+                                  border-radius: 4px;
+                                  background: #ffffff;
+                                  font-size: 14px;
+                                  font-family: Noto Sans, sans-serif;
+                                  font-weight: 500;
+                                  line-height: 16px;
+                                  letter-spacing: 0.13px;
+                                  text-align: center;
+                                "
+                              >
+                                <a
+                                  href="/"
+                                  style="
+                                    color: #000000;
+                                    text-decoration: none;
+                                    cursor: pointer;
+                                  "
+                                  >Try it now!</a
+                                >
+                              </button>
+                            </td>
+                          </tr>
+                        </table>
                       </td>
                     </tr>
                     <tr class="section-1 section-left">
-                      <td class="section-left__data" align="center">
-                        <div class="section-left__image section-1__image">
-                          <img
-                            src="https://s3-alpha-sig.figma.com/img/f76e/bc68/559881468812061e0b813da54aecaffa?Expires=1724025600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TffUe095CK~sTYAUtVjiHbevEdUN8iGq2FwvZBiuiwYL-l87cxFF0kfJ5MyXjmckoJ0Tt6JXxFezjIM4ijAndbLKvxzLAKSXQNwrWVGR4xh5L-m0uvVcAcTf-7bsdq-uzATqzgejQOZewR-wSlchA807rMYgOYYSfBSALR~Pg~5VLWMKxMlG2m0g7WgzAnndtKoBZuNfBpfafR2q-B6P6PzbWMeEnJJFttT9CE2qUmb-8rxKu7wTnU6my6DbCGxTLn~xg2v-o9QfxV2KtWOTLjSY0I5vsQozE0ygQ2gA0h7L7W-hg0TnpnfgYArgWQ35X5fcIZ4bwRWmNvi0x24iUQ__"
-                            alt="Section 1 image"
-                          />
-                        </div>
-                        <div class="section-left__content">
-                          <h3 class="section-title">
-                            Customize this email template!
-                          </h3>
-                          <p class="section-description">
-                            Boost your emails with Blush! Create dope emails
-                            easy and fast!
-                          </p>
-                          <button class="section-button">
-                            <a href="/">Try it now!</a>
-                          </button>
-                        </div>
+                      <td
+                        class="section-left__data"
+                        align="center"
+                        style="padding: 0"
+                      >
+                        <table id="section-table">
+                          <tbody>
+                            <tr style="padding: 0">
+                              <td class="section-left__image">
+                                <img
+                                  src="https://s3-alpha-sig.figma.com/img/f76e/bc68/559881468812061e0b813da54aecaffa?Expires=1724025600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TffUe095CK~sTYAUtVjiHbevEdUN8iGq2FwvZBiuiwYL-l87cxFF0kfJ5MyXjmckoJ0Tt6JXxFezjIM4ijAndbLKvxzLAKSXQNwrWVGR4xh5L-m0uvVcAcTf-7bsdq-uzATqzgejQOZewR-wSlchA807rMYgOYYSfBSALR~Pg~5VLWMKxMlG2m0g7WgzAnndtKoBZuNfBpfafR2q-B6P6PzbWMeEnJJFttT9CE2qUmb-8rxKu7wTnU6my6DbCGxTLn~xg2v-o9QfxV2KtWOTLjSY0I5vsQozE0ygQ2gA0h7L7W-hg0TnpnfgYArgWQ35X5fcIZ4bwRWmNvi0x24iUQ__"
+                                  alt="Section 1 image"
+                                  style="
+                                    width: 260px;
+                                    height: 260px;
+                                    border-radius: 8px;
+                                    background: #ffa1b8;
+                                    object-fit: contain;
+                                    margin-right: 24px;
+                                  "
+                                />
+                              </td>
+                              <td>
+                                <table
+                                  class="section-left__content"
+                                  style="
+                                    flex: 1;
+                                    display: flex;
+                                    flex-direction: column;
+                                    padding: 16px 0;
+                                    gap: 8px;
+                                    text-align: left;
+                                  "
+                                >
+                                  <tr>
+                                    <td>
+                                      <h3
+                                        class="section-title"
+                                        style="font-size: 27px; margin: 0"
+                                      >
+                                        Customize this email template!
+                                      </h3>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p
+                                        class="section-description"
+                                        style="
+                                          font-size: 20px;
+                                          line-height: 24px;
+                                        "
+                                      >
+                                        Boost your emails with Blush! Create
+                                        dope emails easy and fast!
+                                      </p>
+                                    </td>
+                                  </tr>
+                                  <tr style="align-self: flex-start">
+                                    <td>
+                                      <button
+                                        class="section-button"
+                                        style="
+                                          padding: 13px;
+                                          width: fit-content;
+                                          border: 1px solid #000000;
+                                          border-radius: 4px;
+                                          background: #ffffff;
+                                          font-size: 14px;
+                                          font-family: Noto Sans, sans-serif;
+                                          font-weight: 500;
+                                          line-height: 16px;
+                                          letter-spacing: 0.13px;
+                                          text-align: center;
+                                        "
+                                      >
+                                        <a
+                                          href="/"
+                                          style="
+                                            color: #000000;
+                                            text-decoration: none;
+                                            cursor: pointer;
+                                          "
+                                          >Try it now!</a
+                                        >
+                                      </button>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </td>
                     </tr>
                     <tr class="section-2 section-right">
-                      <td class="section-right__data" align="center">
-                        <div class="section-right__image section-2__image">
-                          <img
-                            src="https://s3-alpha-sig.figma.com/img/2669/527a/8126f2c80a2dd96ea3729143281dd599?Expires=1724025600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NS~J7oq0HfUw8DBVe5GvPbyOWFmlUkdOqUW25YFbHCgmB-~wvHLBNNIf9F-sgNh51kGxpiLqLZ1VOnsncMUzrFOTcWhkF-9LoEgwTa1tdibqUeU7F6PkDaLF71gaqUZDkI56nBFqkamUqyjC8A3lhQnd~XExIlK1UxNHifnmmTM5gCFYq3amio97TZvQihDiPWdGWeS6rLxsttl3g8gUzu7aeckDR6hMy1Nu1CeQ2iFIeONiKsOtCnNbr7Fx~DQMrwTQ4Va-6gGCSDKBOWRxyOV17YQhXnpig8870oqcjOlmON1KFM171kn53rU4KCP4Xuz0iLhbz4M9c0Mz1u3cXg__"
-                            alt="Section 2 image"
-                          />
-                        </div>
-                        <div class="section-right__content">
-                          <h3 class="section-title">
-                            Customize this email template!
-                          </h3>
-                          <p class="section-description">
-                            Boost your emails with Blush! Create dope emails
-                            easy and fast!
-                          </p>
-                          <button class="section-button">
-                            <a href="/">Try it now!</a>
-                          </button>
-                        </div>
+                      <td
+                        class="section-right__data"
+                        align="center"
+                        style="padding: 0"
+                      >
+                        <table id="section-table">
+                          <tbody>
+                            <tr style="padding: 0">
+                              <td>
+                                <table
+                                  class="section-right__content"
+                                  style="
+                                    flex: 1;
+                                    display: flex;
+                                    flex-direction: column;
+                                    padding: 16px 0;
+                                    gap: 8px;
+                                    text-align: left;
+                                  "
+                                >
+                                  <tr>
+                                    <td>
+                                      <h3
+                                        class="section-title"
+                                        style="font-size: 27px; margin: 0"
+                                      >
+                                        Customize this email template!
+                                      </h3>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p
+                                        class="section-description"
+                                        style="
+                                          font-size: 20px;
+                                          line-height: 24px;
+                                        "
+                                      >
+                                        Boost your emails with Blush! Create
+                                        dope emails easy and fast!
+                                      </p>
+                                    </td>
+                                  </tr>
+                                  <tr style="align-self: flex-start">
+                                    <td>
+                                      <button
+                                        class="section-button"
+                                        style="
+                                          padding: 13px;
+                                          width: fit-content;
+                                          border: 1px solid #000000;
+                                          border-radius: 4px;
+                                          background: #ffffff;
+                                          font-size: 14px;
+                                          font-family: Noto Sans, sans-serif;
+                                          font-weight: 500;
+                                          line-height: 16px;
+                                          letter-spacing: 0.13px;
+                                          text-align: center;
+                                        "
+                                      >
+                                        <a
+                                          href="/"
+                                          style="
+                                            color: #000000;
+                                            text-decoration: none;
+                                            cursor: pointer;
+                                          "
+                                          >Try it now!</a
+                                        >
+                                      </button>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                              <td class="section-right__image">
+                                <img
+                                  src="https://s3-alpha-sig.figma.com/img/2669/527a/8126f2c80a2dd96ea3729143281dd599?Expires=1724025600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NS~J7oq0HfUw8DBVe5GvPbyOWFmlUkdOqUW25YFbHCgmB-~wvHLBNNIf9F-sgNh51kGxpiLqLZ1VOnsncMUzrFOTcWhkF-9LoEgwTa1tdibqUeU7F6PkDaLF71gaqUZDkI56nBFqkamUqyjC8A3lhQnd~XExIlK1UxNHifnmmTM5gCFYq3amio97TZvQihDiPWdGWeS6rLxsttl3g8gUzu7aeckDR6hMy1Nu1CeQ2iFIeONiKsOtCnNbr7Fx~DQMrwTQ4Va-6gGCSDKBOWRxyOV17YQhXnpig8870oqcjOlmON1KFM171kn53rU4KCP4Xuz0iLhbz4M9c0Mz1u3cXg__"
+                                  alt="Section 2 image"
+                                  style="
+                                    width: 260px;
+                                    height: 260px;
+                                    border-radius: 8px;
+                                    background: #c5f8ff;
+                                    object-fit: contain;
+                                  "
+                                />
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </td>
                     </tr>
                     <tr class="section-3 section-left">
-                      <td class="section-left__data" align="center">
-                        <div class="section-left__image section-3__image">
-                          <img
-                            src="https://s3-alpha-sig.figma.com/img/79fa/903b/e8f940b4c1487d7bef4b8c6637e3e673?Expires=1724025600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VgeNz7A7jNyVemwqmUZ9Rzkg9HqGBlmiyVOljhQ5Ju4EHAqWq6zEr4CKS1hkrsikmljxqoExEviXnIJl0raOOSbeq~XckF89JVNTD0OmzuDZMKFCvtsBd1rmJXVPZv-3MH7uc~jE6alCMtj3d9OJDHyBG3jw2Gd5G2ZRPHSAKQppKQFh8s29p~oi9ZM6dORRBIynhMbCVLCgj86DL1wL2uXSzggy25ZTt13mcQJGLQwt8yZW1RQ7wdVuA9nFQAm~AgqDAtdUbAfu4Dg9Jxu~IOvcgHh~Fqr1UD8GFpCV8bFv2FtqsN1kM5dImUbs7YJdxhLPVCKj9PvopIIk4wfrdw__"
-                            alt="Section 3 image"
-                          />
-                        </div>
-                        <div class="section-left__content">
-                          <h3 class="section-title">
-                            Customize this email template!
-                          </h3>
-                          <p class="section-description">
-                            Boost your emails with Blush! Create dope emails
-                            easy and fast!
-                          </p>
-                          <button class="section-button">
-                            <a href="/">Try it now!</a>
-                          </button>
-                        </div>
+                      <td
+                        class="section-left__data"
+                        align="center"
+                        style="padding: 0"
+                      >
+                        <table id="section-table">
+                          <tbody>
+                            <tr style="padding: 0">
+                              <td class="section-left__image">
+                                <img
+                                  src="https://s3-alpha-sig.figma.com/img/79fa/903b/e8f940b4c1487d7bef4b8c6637e3e673?Expires=1724025600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VgeNz7A7jNyVemwqmUZ9Rzkg9HqGBlmiyVOljhQ5Ju4EHAqWq6zEr4CKS1hkrsikmljxqoExEviXnIJl0raOOSbeq~XckF89JVNTD0OmzuDZMKFCvtsBd1rmJXVPZv-3MH7uc~jE6alCMtj3d9OJDHyBG3jw2Gd5G2ZRPHSAKQppKQFh8s29p~oi9ZM6dORRBIynhMbCVLCgj86DL1wL2uXSzggy25ZTt13mcQJGLQwt8yZW1RQ7wdVuA9nFQAm~AgqDAtdUbAfu4Dg9Jxu~IOvcgHh~Fqr1UD8GFpCV8bFv2FtqsN1kM5dImUbs7YJdxhLPVCKj9PvopIIk4wfrdw__"
+                                  alt="Section 3 image"
+                                  style="
+                                    width: 260px;
+                                    height: 260px;
+                                    border-radius: 8px;
+                                    background: #ffe27b;
+                                    object-fit: contain;
+                                    margin-right: 24px;
+                                  "
+                                />
+                              </td>
+                              <td>
+                                <table
+                                  class="section-left__content"
+                                  style="
+                                    flex: 1;
+                                    display: flex;
+                                    flex-direction: column;
+                                    padding: 16px 0;
+                                    gap: 8px;
+                                    text-align: left;
+                                  "
+                                >
+                                  <tr>
+                                    <td>
+                                      <h3
+                                        class="section-title"
+                                        style="font-size: 27px; margin: 0"
+                                      >
+                                        Customize this email template!
+                                      </h3>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p
+                                        class="section-description"
+                                        style="
+                                          font-size: 20px;
+                                          line-height: 24px;
+                                        "
+                                      >
+                                        Boost your emails with Blush! Create
+                                        dope emails easy and fast!
+                                      </p>
+                                    </td>
+                                  </tr>
+                                  <tr style="align-self: flex-start">
+                                    <td>
+                                      <button
+                                        class="section-button"
+                                        style="
+                                          padding: 13px;
+                                          width: fit-content;
+                                          border: 1px solid #000000;
+                                          border-radius: 4px;
+                                          background: #ffffff;
+                                          font-size: 14px;
+                                          font-family: Noto Sans, sans-serif;
+                                          font-weight: 500;
+                                          line-height: 16px;
+                                          letter-spacing: 0.13px;
+                                          text-align: center;
+                                        "
+                                      >
+                                        <a
+                                          href="/"
+                                          style="
+                                            color: #000000;
+                                            text-decoration: none;
+                                            cursor: pointer;
+                                          "
+                                          >Try it now!</a
+                                        >
+                                      </button>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </td>
                     </tr>
-                    <tr class="conclusion-section">
-                      <td class=""" align="center">
-                        <p>
-                            Boost your emails with Blush! Create dope emails easy and fast!
-                            <br/>Install the Blush plugin to customize all the illustrations!
-                            <br/><br/>Create the coolest emails!
+                    <tr
+                      class="conclusion-section"
+                      style="padding: 0 20px; text-align: start"
+                    >
+                      <td align="center" style="padding: 0">
+                        <p
+                          style="
+                            font-size: 20px;
+                            line-height: 24px;
+                            text-align: start;
+                          "
+                        >
+                          Boost your emails with Blush! Create dope emails easy
+                          and fast!
+                          <br />Install the Blush plugin to customize all the
+                          illustrations! <br /><br />Create the coolest emails!
                         </p>
                       </td>
                     </tr>
                     <tr>
-                      <td>
-                          <hr/>
+                      <td style="padding: 0">
+                        <hr style="width: 600px; border: 1.5px solid #000000" />
                       </td>
                     </tr>
                   </table>
                 </td>
               </tr>
               <tr>
-                <td align="center" valign="top">
+                <td align="center" valign="top" style="padding: 0">
                   <table
                     border="0"
                     cellpadding="20"
@@ -543,7 +643,12 @@
                   >
                     <tbody>
                       <tr>
-                        <td class="footer-section" align="center" valign="top">
+                        <td
+                          class="footer-section"
+                          align="center"
+                          valign="top"
+                          style="padding: 0"
+                        >
                           <p>
                             Corporation<br />You are receiving this email
                             because you opted in via our <br />website.
@@ -584,7 +689,20 @@
                         </td>
                       </tr>
                       <tr>
-                        <td class="logo">Logo</td>
+                        <td align="center" valign="top" style="padding: 0">
+                          <h1
+                            class="logo"
+                            style="
+                              font-size: 36px;
+                              font-weight: 700;
+                              text-transform: uppercase;
+                              text-align: center;
+                              margin: 0;
+                            "
+                          >
+                            Logo
+                          </h1>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
